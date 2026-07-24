@@ -1,0 +1,563 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+main{
+    width:100%;
+  
+}
+
+/* Hero 1 */
+
+.hero-1{
+    width:100%;
+      padding:20px 50px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav h3{
+    font-size:22px;
+}
+
+nav p{
+    font-size:18px;
+}
+
+nav i{
+    font-size:25px;
+}
+
+.hero-1 h1{
+    font-size:12.5vw;
+    font-weight:400;
+    margin-top:20px;
+    line-height:1;
+}
+
+/* Hero 2 */
+
+.hero-2{
+    width:100%;
+    display:flex;
+    margin-top:20px;
+    gap:50px;
+      padding:20px 50px;
+}
+
+.left{
+    width:50%;
+}
+
+.right{
+    width:50%;
+}
+
+.right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.top p{
+    font-size:22px;
+}
+
+.left h2{
+    font-size:55px;
+    font-weight:400;
+    line-height:1.1;
+    letter-spacing: 10px;
+    margin-bottom:25px;
+}
+
+.para{
+    width:80%;
+    font-size:25px;
+    line-height:40px;
+    margin-bottom:40px;
+}
+
+.service{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 0;
+}
+
+.service span{
+    font-size:30px;
+}
+
+.service h3{
+    font-size:40px;
+    font-weight:200;
+}
+
+hr{
+    border:none;
+    border-top:1px solid gray;
+}
+
+
+
+
+
+.hero-3{
+    width:100%;
+    display:flex;
+    gap:60px;
+    margin-top: 3vw;
+     padding:20px 50px;
+}
+
+.left{
+    width:35%;
+}
+
+.left img{
+    width:100%;
+    display:block;
+}
+
+.right{
+    width:65%;
+    position:relative;
+}
+
+.side-text{
+    position:absolute;
+    right:0;
+    top:0;
+    writing-mode:vertical-rl;
+    font-size:20px;
+}
+
+.right h1{
+    font-size:90px;
+    font-weight: 100;
+    line-height:1.05;
+    margin-bottom:80px;
+}
+
+.desc{
+    width:80%;
+    font-size:18px;
+    letter-spacing:3px;
+}
+
+
+
+
+
+.hero-4{
+    width:100%;
+    display:flex;
+    padding:40px;
+    gap:50px;
+}
+
+.left{
+    width:45%;
+}
+
+.right{
+    width:55%;
+}
+
+.right img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.left h1{
+    font-size:70px;
+    font-weight:400;
+    line-height:1.1;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.card{
+    width:47%;
+    border-top:1px solid gray;
+    padding-top:20px;
+}
+
+.card h2{
+    font-size:23px;
+    font-weight:400;
+    margin-bottom:15px;
+}
+
+.card p{
+    font-size:16px;
+    color: gray;
+    line-height:22px;
+    letter-spacing: 3px;
+    margin-bottom:30px;
+}
+
+.card button{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:none;
+    background:black;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.card span{
+    margin-left:15px;
+    font-size:12px;
+}
+
+
+
+
+
+.hero-5{
+    width:100%;
+    background:black;
+    color:white;
+    text-align:center;
+    padding:120px 40px;
+    border-bottom:1px solid gray;
+}
+
+.hero-5 h1{
+    font-size:150px;
+    font-weight:300;
+    margin-bottom:40px;
+}
+
+.hero-5 h2{
+    font-size:40px;
+    font-weight:300;
+    margin-bottom:60px;
+}
+
+.hero-5 button{
+    padding:9px 22px;
+    font-size:15px;
+    border:1px solid #F0F0F0;
+    border-radius:30px;
+    background:white;
+    color:black;
+    cursor:pointer;
+}
+
+
+
+footer{
+    width:100%;
+    background:black;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:60px 30px;
+}
+
+.logo{
+    width:25%;
+}
+
+.logo h2{
+    font-size:40px;
+    font-weight:400;
+}
+
+.column{
+    width:20%;
+    display:flex;
+    flex-direction:column;
+}
+
+.column h3{
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:30px;
+}
+
+.column a{
+    color:white;
+    text-decoration:none;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+
+
+
+
+
+@media (max-width:992px){
+
+    .hero-1,
+    .hero-2,
+    .hero-3,
+    .hero-4{
+        padding:30px;
+    }
+
+    .hero-1 h1{
+        font-size:14vw;
+    }
+
+    .hero-2,
+    .hero-3,
+    .hero-4{
+        flex-direction:column;
+        gap:40px;
+    }
+
+    .hero-2 .left,
+    .hero-2 .right,
+    .hero-3 .left,
+    .hero-3 .right,
+    .hero-4 .left,
+    .hero-4 .right{
+        width:100%;
+    }
+
+    .left h2{
+        font-size:45px;
+        letter-spacing:5px;
+    }
+
+    .right h1{
+        font-size:60px;
+    }
+
+    .desc{
+        width:100%;
+        font-size:18px;
+    }
+
+    .cards{
+        gap:20px;
+    }
+
+    .card{
+        width:48%;
+    }
+
+    .hero-5{
+        padding:80px 20px;
+    }
+
+    .hero-5 h1{
+        font-size:90px;
+    }
+
+    .hero-5 h2{
+        font-size:28px;
+    }
+
+    footer{
+        flex-wrap:wrap;
+        gap:40px;
+    }
+
+    .logo{
+        width:100%;
+    }
+
+    .column{
+        width:45%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+    .hero-1,
+    .hero-2,
+    .hero-3,
+    .hero-4{
+        padding:20px;
+    }
+
+    nav h3{
+        font-size:18px;
+    }
+
+    nav p{
+        font-size:15px;
+    }
+
+    nav i{
+        font-size:20px;
+    }
+
+    .hero-1 h1{
+        font-size:18vw;
+    }
+
+    .hero-2,
+    .hero-3,
+    .hero-4{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .hero-2 .left,
+    .hero-2 .right,
+    .hero-3 .left,
+    .hero-3 .right,
+    .hero-4 .left,
+    .hero-4 .right{
+        width:100%;
+    }
+
+    .top p{
+        font-size:18px;
+    }
+
+    .left h2{
+        font-size:32px;
+        letter-spacing:3px;
+    }
+
+    .service{
+        padding:18px 0;
+    }
+
+    .service span{
+        font-size:22px;
+    }
+
+    .service h3{
+        font-size:24px;
+    }
+
+    .right h1{
+        font-size:42px;
+        margin-bottom:30px;
+    }
+
+    .side-text{
+        position:static;
+        writing-mode:horizontal-tb;
+        margin-bottom:15px;
+    }
+
+    .desc{
+        width:100%;
+        font-size:15px;
+        letter-spacing:1px;
+        line-height:28px;
+    }
+
+    .left h1{
+        font-size:45px;
+    }
+
+    .cards{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .card{
+        width:100%;
+    }
+
+    .card h2{
+        font-size:22px;
+    }
+
+    .card p{
+        font-size:15px;
+    }
+
+    .hero-5{
+        padding:60px 20px;
+    }
+
+    .hero-5 h1{
+        font-size:50px;
+    }
+
+    .hero-5 h2{
+        font-size:20px;
+        line-height:30px;
+    }
+
+    .hero-5 button{
+        padding:10px 20px;
+        font-size:14px;
+    }
+
+    footer{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .logo{
+        width:100%;
+    }
+
+    .logo h2{
+        font-size:30px;
+    }
+
+    .column{
+        width:100%;
+    }
+
+    .column h3{
+        font-size:18px;
+        margin-bottom:15px;
+    }
+
+    .column a{
+        font-size:14px;
+        margin-bottom:15px;
+    }
+
+}
+
+
