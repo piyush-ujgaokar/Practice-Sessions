@@ -84,6 +84,9 @@ const updateUser = (email) => {
     return val.email === email;
   });
 
+  console.log(user);
+  
+
   formMain[0].value = user.name;
   formMain[1].value = user.email;
   formMain[2].value = user.company;
@@ -105,5 +108,6 @@ const deleteId = (email) => {
 
   renderUi();
 };
+
 
 renderUi();

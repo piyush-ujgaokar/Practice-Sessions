@@ -1,0 +1,712 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #FFFFFF;
+  color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+nav{
+  width: 100%;
+  height: 6vh;
+  background-color: #F4F4F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.2vw;
+  font-size: 0.8vw;
+  font-weight: 400;
+}
+
+.text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text p{
+    font-size: 15px;
+    padding: 13px;
+}
+
+
+.hero-2{
+  width: 100%;
+  padding: 5vh 7vw;
+  background-color: #F4F4F5;
+}
+ 
+.top-row{
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 6vh;
+}
+ 
+.top-row h1{
+  font-size: 2.8vw;
+  font-weight: 700;
+}
+ 
+.top-row h1 span{
+  font-weight: 500;
+  color: #6E6E73;
+  margin-left: 0.5vw;
+}
+ 
+
+ 
+.category-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6vh;
+  margin-top: 5vw;
+  gap: 20px;
+}
+ 
+.category-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vh;
+}
+ 
+.category-box img{
+  width: 120px;
+}
+ 
+.category-box p{
+  font-size: 0.85vw;
+  font-weight: 600;
+}
+ 
+.hero-2 h2{
+  font-size: 2vw;
+  font-weight:700;
+  margin-bottom: 3vh;
+}
+ 
+.hero-2 h2 span{
+  font-weight: 500;
+  color: #6E6E73;
+  margin-left: 0.5vw;
+}
+ 
+.card-row{
+  width: 100%;
+  display: flex;
+  gap: 1.2vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+ 
+ 
+.card-box{
+  min-width: 20vw;
+  height: 27vw;
+  border-radius: 12px;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  
+}
+ 
+.dark-card{
+  background-color: #000000;
+  color: white;
+}
+ 
+.light-card{
+  background-color: #D7E8F2;
+}
+ 
+.white-card{
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+}
+ 
+.card-box h4{
+  font-size: 1.3vw;
+  margin-bottom: 0.5vh;
+}
+ 
+.card-box h5{
+  font-size: 1vw;
+  background: linear-gradient(90deg, #7B61FF, #FF6B6B);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1vh;
+}
+ 
+.card-box .dark-text{
+  -webkit-text-fill-color: black;
+  background: none;
+  font-weight: bold;
+}
+ 
+.card-box p{
+  font-size: 0.85vw;
+  font-weight: bold;
+}
+ 
+.card-box .offer{
+  font-size: 0.75vw;
+  color: #D2402E;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+ 
+.card-box img{
+  width: 100%;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 2vh;
+}
+
+.help-title{
+  font-size: 1.8vw;
+  font-weight: 900;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+}
+ 
+.help-title span,
+.bottom-title span{
+  font-weight: 600;
+  color: #6E6E73;
+  margin-left: 0.5vw;
+}
+ 
+.help-row{
+  width: 100%;
+  display: flex;
+  gap: 1.2vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.help-row::-webkit-scrollbar{
+  display: none;
+}
+ 
+.help-card{
+  min-width: 25%;
+  height: 35vw;
+  border-radius: 12px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border: 2px solid rgb(228, 222, 222);
+  cursor: pointer;
+}
+ 
+.card-1{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-specialist-help-202506_FMT_WHH?wid=4000&hei=5825&fmt=p-jpg&qlt=95&.v=TkJLQU9OWTZMS1N4dlhoOWl3SEhrUkxnN3NTOHN5WTV1c3NEYkc1TXhDM3ZXZVVtcVZvdGc2TGo1aEhRamVZSk1YcHFQMlV2ZHJvWUFGeXcraFpDS2VCc3FjamJwVXJjd2U3WEc3Smc2MXpoeGhHK2NKNmQxb05uRlVjdEZzUVhmbW94YnYxc1YvNXZ4emJGL0IxNFp3");
+}
+ 
+.card-2{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-specialist-video-202409_FMT_WHH?wid=618&hei=900&fmt=p-jpg&qlt=95&.v=TkJLQU9OWTZMS1N4dlhoOWl3SEhrYnlpTHAvaU1TZWJjTXg3K2FoelBrYU9STS9wYXZTN1hicnBjZ2p3Y1lQVnZ4MW5ZMFEzd1dneEFIc0oxbVRnYzlrb3YwRE90eklmVkIwdHovcEFheWo4eEs2QjhSMGI5UVVaeUVzTGcrR0Y");
+}
+ 
+.card-3{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-taa-202505_FMT_WHH?wid=618&hei=900&fmt=p-jpg&qlt=95&.v=cFEvalhFakpZVzg4RFZsWktqbXFNWUxLMTZiajZkeTVDSUtOdXBXUUFybmVIRDNscnlaOWlpZS9JTVEvRVFXRnNtS0NkZnlUKzBRdlpRai9zMDR0cS85dkRxQVRuNHJmT0xsM1VjQlBOQnJrbUNYSlozTndGcHB6N1hEeU4wL1U");
+}
+ 
+.card-4{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-TAA-202310_FMT_WHH?wid=618&hei=900&fmt=p-jpg&qlt=95&.v=VXV6Z09DaTFST3FqTnRkTjNkSENPLzRHU1VPb2FYSnFxa0Y2Si9mMUdRVGVIRDNscnlaOWlpZS9JTVEvRVFXRnNtS0NkZnlUKzBRdlpRai9zMDR0cXo2SGZscTZIVy91OUtRZEZQVkJWSjFqc3Q2bE9IU3c0VC9VWFhBNmcwM1c");
+}
+.card-5{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-personal-setup-202408_GEO_US_FMT_WHH?wid=618&hei=900&fmt=jpeg&qlt=90&.v=cFhHZjJBWFBWT2pMQnNFR2RGWlEwWlNLRUlsMkFxY1ZMQzZzY0tkenJrbDVpMjYxUTBHY0YydmFtTWsvQzFCQW92SFl6cE5HTTBPdys2R0x5WnZENHpDbVV0bFd2c1JzMEQxWXJScnlTdGFjSjdnclAxUisrbnBVbW43SGlEUnpXb0JwaWhEMllVWDJyWms5Wmhmd3F3");
+}
+.card-6{
+  background-image: url("https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/store-card-50-genius-202108_FMT_WHH?wid=618&hei=900&fmt=p-jpg&qlt=95&.v=UjZWNjB3VDZRK09HelFpSjJDWXROTU1GVnluSEZEN3Fla0dFUHpTQjhHYjcybWo3UjgwOFBCNmRBRDAzQUgyU3ZoZ3NDaDQzN0hkK1VPMDEwRXNQVDhtd3k4VkkwQ2l3cXZ6cEkycldOaXlpUG9oNWpCMW9yS05jWThjWnhCanQ");
+}
+ 
+.help-text{
+  position: absolute;
+  top: 6%;
+  left: 8%;
+  right: 8%;
+}
+ 
+.help-text .tag{
+  font-size: 0.75vw;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+ 
+.help-text h4{
+  font-size: 1.1vw;
+  margin-bottom: 1vh;
+}
+ 
+.help-text .desc{
+  font-size: 0.9vw;
+  color: #333333;
+}
+ 
+.bottom-title{
+  font-size: 1.8vw;
+  font-weight: 900;
+  margin-top: 6vh;
+}
+
+
+
+
+
+.hero-3{
+  width: 100%;
+  padding: 5vh 3vw;
+}
+ 
+.card-row{
+  width: 100%;
+  display: flex;
+  gap: 1.5vw;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+ 
+.card-row::-webkit-scrollbar{
+  display: none;
+}
+ 
+.info-card{
+  min-width: 32vw;
+  height: 20vw;
+  background-color: white;
+  border-radius: 12px;
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+.info-card i{
+  font-size: 2vw;
+  color: #333333;
+}
+ 
+.info-card p{
+  font-size: 1.9vw;
+  font-weight: bold;
+  line-height: 1.4;
+}
+ 
+.blue-text{
+  color: #0068B4;
+}
+ 
+
+
+
+
+
+
+
+.hero-4{
+  width: 100%;
+  padding: 5vh 10vw;
+  border-bottom: 2px solid rgb(205, 203, 203);
+}
+ 
+.hero-4 h2{
+  font-size: 1.8vw;
+  font-weight: 700;
+  margin-bottom: 3vh;
+}
+ 
+.link-row{
+  display: flex;
+  gap: 1vw;
+  margin-bottom: 5vh;
+}
+ 
+.link{
+  padding: 0.5vw 1.2vw;
+  border: 1px solid #333333;
+  border-radius: 30px;
+  font-size: 0.9vw;
+  font-weight: 600;
+  cursor: pointer;
+}
+ 
+.legal-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+ 
+.legal-text p{
+  font-size: 0.85vw;
+  color: #6E6E73;
+  line-height: 1.6;
+}
+
+
+
+
+
+
+footer{
+  width: 100%;
+  padding: 3vh 10vw;
+ 
+}
+ 
+.path-row{
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+  font-size: 0.85vw;
+  color: #333333;
+  margin-bottom: 4vh;
+}
+ 
+.link-row{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+ 
+.link-col{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+}
+ 
+.link-col h5{
+  font-size: 0.9vw;
+  font-weight: bold;
+  margin-top: 1vh;
+}
+ 
+.link-col a{
+  font-size: 0.85vw;
+  color: #6E6E73;
+  text-decoration: none;
+}
+ 
+.more-line{
+  font-size: 0.85vw;
+  color: #333333;
+  padding-bottom: 3vh;
+  border-bottom: 1px solid #D2D2D7;
+  margin-bottom: 2vh;
+}
+ 
+.more-line a{
+  color: #0068B4;
+  text-decoration: underline;
+}
+ 
+.bottom-row{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8vw;
+  color: #6E6E73;
+}
+
+
+
+
+
+@media (max-width: 992px) {
+
+  nav{
+    height: auto;
+    padding: 15px;
+    gap: 18px;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .text p{
+    font-size: 14px;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .hero-2,
+  .hero-3,
+  .hero-4,
+  footer{
+    padding: 30px;
+  }
+
+  .top-row h1{
+    font-size: 40px;
+  }
+
+  .hero-2 h2,
+  .help-title,
+  .bottom-title,
+  .hero-4 h2{
+    font-size: 30px;
+  }
+
+  .category-row{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .category-box{
+    width: 120px;
+  }
+
+  .category-box img{
+    width: 90px;
+  }
+
+  .category-box p{
+    font-size: 14px;
+  }
+
+  .card-box{
+    min-width: 320px;
+    height: 450px;
+  }
+
+  .card-box h4{
+    font-size: 22px;
+  }
+
+  .card-box h5{
+    font-size: 18px;
+  }
+
+  .card-box p{
+    font-size: 15px;
+  }
+
+  .card-box .offer{
+    font-size: 13px;
+  }
+
+  .help-card{
+    min-width: 320px;
+    height: 450px;
+  }
+
+  .help-text .tag{
+    font-size: 12px;
+  }
+
+  .help-text h4{
+    font-size: 22px;
+  }
+
+  .help-text .desc{
+    font-size: 15px;
+  }
+
+  .info-card{
+    min-width: 350px;
+    height: 250px;
+  }
+
+  .info-card i{
+    font-size: 35px;
+  }
+
+  .info-card p{
+    font-size: 26px;
+  }
+
+  .link-row{
+    flex-wrap: wrap;
+  }
+
+  .link{
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  footer .link-row{
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .link-col{
+    width: 45%;
+  }
+
+  .link-col h5{
+    font-size: 16px;
+  }
+
+  .link-col a,
+  .legal-text p,
+  .bottom-row,
+  .more-line{
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 600px){
+
+  nav{
+    justify-content: center;
+    gap: 12px;
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .text p{
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .hero-2,
+  .hero-3,
+  .hero-4,
+  footer{
+    padding:20px;
+  }
+
+  .top-row{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .top-row h1{
+    font-size: 32px;
+  }
+
+  .hero-2 h2,
+  .help-title,
+  .bottom-title,
+  .hero-4 h2{
+    font-size: 24px;
+  }
+
+  .category-row{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .category-box{
+    width: 90px;
+  }
+
+  .category-box img{
+    width: 70px;
+  }
+
+  .category-box p{
+    font-size: 12px;
+  }
+
+  .card-box{
+    min-width: 280px;
+    height: 390px;
+    padding: 20px;
+  }
+
+  .card-box h4{
+    font-size: 20px;
+  }
+
+  .card-box h5{
+    font-size: 16px;
+  }
+
+  .card-box p{
+    font-size: 14px;
+  }
+
+  .card-box .offer{
+    font-size: 12px;
+  }
+
+  .help-card{
+    min-width: 280px;
+    height: 390px;
+  }
+
+  .help-text .tag{
+    font-size: 11px;
+  }
+
+  .help-text h4{
+    font-size: 18px;
+  }
+
+  .help-text .desc{
+    font-size: 13px;
+  }
+
+  .info-card{
+    min-width: 280px;
+    height: 220px;
+  }
+
+  .info-card i{
+    font-size: 30px;
+  }
+
+  .info-card p{
+    font-size: 20px;
+  }
+
+  .link-row{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .link{
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  footer .link-row{
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .link-col{
+    width: 100%;
+  }
+
+  .link-col h5{
+    font-size: 16px;
+  }
+
+  .link-col a{
+    font-size: 14px;
+  }
+
+  .legal-text p,
+  .more-line,
+  .bottom-row{
+    font-size: 13px;
+  }
+
+  .bottom-row{
+    flex-direction: column;
+    gap: 10px;
+  }
+}
