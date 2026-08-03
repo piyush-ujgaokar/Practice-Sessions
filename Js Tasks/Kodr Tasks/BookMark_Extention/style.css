@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 20px 20px;
+}
+
+input {
+    padding: 10px 20px;
+    font-size: 1.2vw;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 2vw;
+
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1vw;
+    border: none;
+    outline: none;
+    background-color: rgb(28, 128, 0);
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.ul-div{
+    padding: 20px;
+}
+
+li {
+    margin-top:10px;
+    font-size: 1.3vw;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
