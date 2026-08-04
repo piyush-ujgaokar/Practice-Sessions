@@ -1,10 +1,10 @@
-let arr=[1,2,3,4,5,6]
+let arr=[1,2,3,4,5]
+let temp=arr[arr.length-1]
 
-let first=arr[0]
-
-for(let i=0;i<arr.length-1;i++){
-    arr[i]=arr[i+1]
+for(let i=arr.length-2;i>=0;i--){
+    arr[i+1]=arr[i]  
 }
-arr[arr.length-1]=first
+
+arr[0]=temp
 
 console.log(arr);

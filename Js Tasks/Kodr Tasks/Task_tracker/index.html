@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+
+    <h2>Task Tracker</h2>
+
+    <br>
+
+    <input type="text" id="task" placeholder="Enter Task">
+
+    <br><br>
+
+    <input type="date" id="date">
+
+    <br><br>
+
+    <select id="status">
+        <option>Pending</option>
+        <option>Completed</option>
+    </select>
+
+    <br><br>
+
+    <button id="addBtn">Add Task</button>
+
+    <br><br>
+
+    <select id="filter">
+        <option value="all">All</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="past">Past</option>
+    </select>
+
+    <hr><br>
+
+    <div id="list"></div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
