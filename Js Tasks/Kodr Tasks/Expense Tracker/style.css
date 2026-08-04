@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+.main{
+    width:400px;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+
+h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    cursor:pointer;
+}
+
+.item{
+    border:1px solid gray;
+    padding:10px;
+    margin-top:10px;
+}
+
+#total{
+    margin-top:20px;
+}
