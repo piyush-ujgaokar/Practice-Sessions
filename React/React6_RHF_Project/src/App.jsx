@@ -9,6 +9,12 @@ const App = () => {
 
   console.log(userData);
 
+  const deleteuser=(id)=>{
+    setUserData((prev)=>{
+     return prev.filter((user)=> user.id !==id)
+    })
+  }
+
   return (
     <div className="p-2 ">
       <NavBar setToggle={setToggle} />
@@ -16,9 +22,9 @@ const App = () => {
         <Form setUserData={setUserData} setToggle={setToggle} />
       ) : (
         <div className="flex flex-wrap gap-12">
-        {userData.map((elem)=>{
-          return <Productcard userdata={elem} />
-        })}
+        {userData.map((elem,idx)=>{
+          return <Productcard key={idx} userdata={elem} deleteUser={deleteuser}/>
+        })} 
         </div>
       )}
     </div>

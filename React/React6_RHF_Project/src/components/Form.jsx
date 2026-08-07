@@ -1,24 +1,26 @@
 import { useForm } from "react-hook-form";
 
-
-
-const Form = ({setUserData,setToggle}) => {
-  
-    
+const Form = ({ setUserData, setToggle }) => {
   let {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm({
-    mode:"onChange"
+    mode: "onChange",
   });
-  
-  const formSubmit = (data) => {
-    setUserData((prev)=>[...prev,data])
 
-    reset()
-    setToggle((prev)=>!prev)
+  const formSubmit = (data) => {
+    setUserData((prev) => [
+      ...prev,
+      {
+        ...data,
+        id: Date.now(),
+      },
+    ]);
+
+    reset();
+    setToggle((prev) => !prev);
   };
 
   return (
@@ -35,7 +37,9 @@ const Form = ({setUserData,setToggle}) => {
           type="text"
           placeholder="Enter User name"
         />
-        {errors.name && <p className="text-s text-red-700">{errors.name.message}</p>}
+        {errors.name && (
+          <p className="text-s text-red-700">{errors.name.message}</p>
+        )}
         <input
           {...register("role", {
             required: "Role is required",
@@ -44,37 +48,43 @@ const Form = ({setUserData,setToggle}) => {
           type="text"
           placeholder="Enter Role"
         />
-        {errors.role && <p className="text-s text-red-700">{errors.role.message}</p>}
+        {errors.role && (
+          <p className="text-s text-red-700">{errors.role.message}</p>
+        )}
         <input
           {...register("email", {
             required: "Email is required",
-            pattern:{
-                value:/^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                message:"Email is Not Valid"
-            }
+            pattern: {
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+              message: "Email is Not Valid",
+            },
           })}
           className="px-4 outline-none py-2 text-xl border rounded-xl"
           type="text"
           placeholder="Enter Email"
         />
-        {errors.email && <p className="text-s text-red-700">{errors.email.message}</p>}
+        {errors.email && (
+          <p className="text-s text-red-700">{errors.email.message}</p>
+        )}
         <input
           {...register("contact", {
             required: "Contact is required",
-            minLength:{
-                value:10,
-                message:"Minimum 10 Digits Are Required"
+            minLength: {
+              value: 10,
+              message: "Minimum 10 Digits Are Required",
             },
-            maxLength:{
-                value:10,
-                message:"Maximum 10 Digit Required "
-            }
+            maxLength: {
+              value: 10,
+              message: "Maximum 10 Digit Required ",
+            },
           })}
           className="px-4 outline-none py-2 text-xl border rounded-xl"
           type="number"
           placeholder="Enter Contact number"
         />
-        {errors.contact && <p className="text-s text-red-700">{errors.contact.message}</p>}
+        {errors.contact && (
+          <p className="text-s text-red-700">{errors.contact.message}</p>
+        )}
         <input
           {...register("image", {
             required: "Image Url is required",
@@ -83,7 +93,9 @@ const Form = ({setUserData,setToggle}) => {
           type="url"
           placeholder="Enter Image url"
         />
-        {errors.image && <p className="text-s text-red-700">{errors.image.message}</p>}
+        {errors.image && (
+          <p className="text-s text-red-700">{errors.image.message}</p>
+        )}
         <button className="text-xl cursor-pointer bg-pink-700 rounded-xl px-4 py-2 ">
           Create user
         </button>
