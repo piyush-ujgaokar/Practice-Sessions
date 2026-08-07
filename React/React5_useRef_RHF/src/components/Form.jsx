@@ -6,7 +6,9 @@ const Form = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    mode:"onChange"
+  });
 
   console.log(errors);
   
