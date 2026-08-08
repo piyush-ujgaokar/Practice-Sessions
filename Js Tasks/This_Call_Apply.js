@@ -23,6 +23,10 @@ let obj2={
 
 
 // greet.call(obj1,"MEssage1","Message2")
-greet.apply(obj2,["MEssage1","Message2"])
+// greet.apply(obj2,["MEssage1","Message2"])
+
+// const a=greet.bind(obj1,"Message1","Message2")
+// a();
+
 
 console.log(obj2);
