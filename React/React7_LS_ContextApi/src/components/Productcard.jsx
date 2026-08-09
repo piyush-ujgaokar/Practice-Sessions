@@ -1,9 +1,5 @@
 
-const Productcard = ({userdata,deleteUser,index}) => {
-    
-
-console.log(userdata);
-
+const Productcard = ({userdata,deleteUser,setToggle,setUpdatedData}) => {
 
   return (
     <div className="w-[22%] mt-3 p-5 border rounded-xl">
@@ -19,9 +15,12 @@ console.log(userdata);
             <p className="text-s text-gray-300 pt-3"><span className="text-lg text-gray-500">Contact:-</span> +91-{userdata.contact}</p>
         </div>
         <div className="flex justify-between pt-3 ">
-            <button className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-green-700">Update</button>
             <button onClick={()=>{
-                deleteUser(index)
+                setToggle((prev)=>!prev)
+                setUpdatedData(userdata)
+            }} className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-green-700">Update</button>
+            <button onClick={()=>{
+                deleteUser(userdata.id)
                 
             }} className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-red-700">Delete</button>
         </div>

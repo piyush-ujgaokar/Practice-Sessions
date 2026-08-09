@@ -7,6 +7,7 @@ const App = () => {
   const [userData, setUserData] = useState(()=>{
     return JSON.parse(localStorage.getItem("users")) || []
   });
+  const [updatedData,setUpdatedData]=useState(null)
   const [toggle, setToggle] = useState(false);
 
   console.log(userData);
@@ -25,15 +26,16 @@ const App = () => {
 
 
 
+
   return (
     <div className="p-2 ">
       <NavBar setToggle={setToggle} />
       {toggle ? (
-        <Form userData={userData} setUserData={setUserData} setToggle={setToggle} />
+        <Form userData={userData} updatedData={updatedData} setUserData={setUserData} setToggle={setToggle} />
       ) : (
         <div className="flex flex-wrap gap-12">
-        {userData.map((elem,idx)=>{
-          return <Productcard index={idx} key={idx} deleteUser={deleteUser} userdata={elem}/>
+        {userData.map((elem)=>{
+          return <Productcard key={elem.id} setToggle={setToggle} setUpdatedData={setUpdatedData} deleteUser={deleteUser} userdata={elem}/>
         })} 
         </div>
       )}

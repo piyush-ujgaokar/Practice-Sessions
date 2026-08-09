@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
+import {nanoid} from 'nanoid'
 
-const Form = ({ setUserData, setToggle, userData }) => {
+const Form = ({ setUserData, setToggle, updatedData, userData }) => {
   let {
     register,
     handleSubmit,
@@ -8,19 +9,33 @@ const Form = ({ setUserData, setToggle, userData }) => {
     formState: { errors },
   } = useForm({
     mode: "onChange",
+    defaultValues:updatedData
   });
 
   const formSubmit = (data) => {
-    let newUser=[...userData,data]
+if(updatedData){
+  setUserData((prev)=>{
+    return prev.map((elem)=>{
+      return elem.id === updatedData.id ? {...data} : elem
+    })
+  })
+}else{
+      let newUser=[...userData,{...data,id:nanoid()}]
     setUserData(newUser);
     localStorage.setItem("users",JSON.stringify(newUser))
 
+}
     reset();
     setToggle((prev) => !prev);
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center relative justify-center h-screen">
+      <div onClick={()=>{
+        setToggle((prev)=>!prev)
+      }} className="bg-red-500 p-2 w-10 h-10 absolute top-10 cursor-pointer right-10 items-center flex justify-center rounded-full">
+        <div className="text-3xl">X</div>
+      </div>
       <form
         onSubmit={handleSubmit(formSubmit)}
         className="flex flex-col w-[30%] p-7 rounded-xl bg-gray-800 gap-5"
