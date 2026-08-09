@@ -1,5 +1,5 @@
 
-const Productcard = ({userdata}) => {
+const Productcard = ({userdata,deleteUser,index}) => {
     
 
 console.log(userdata);
@@ -20,7 +20,10 @@ console.log(userdata);
         </div>
         <div className="flex justify-between pt-3 ">
             <button className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-green-700">Update</button>
-            <button className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-red-700">Delete</button>
+            <button onClick={()=>{
+                deleteUser(index)
+                
+            }} className="px-3 py-2 rounded-xl text-xl cursor-pointer bg-red-700">Delete</button>
         </div>
     </div>
   );
