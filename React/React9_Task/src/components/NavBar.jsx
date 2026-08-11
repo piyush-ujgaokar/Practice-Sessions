@@ -1,4 +1,4 @@
-const Navbar = ({studentCards,total}) => {
+const Navbar = ({studentCards,total, activeStudent}) => {
 
 
 
@@ -32,7 +32,7 @@ const Navbar = ({studentCards,total}) => {
         {/* Active */}
         <div className="border-l-4 border-teal-400 pl-4">
           <h2 className="text-3xl font-semibold">
-            0
+            {activeStudent.length}
           </h2>
 
           <p className="text-sm text-slate-400">
