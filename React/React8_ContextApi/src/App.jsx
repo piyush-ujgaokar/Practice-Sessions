@@ -4,10 +4,10 @@ import NavBar from "./components/NavBar";
 import ProductCard from "./components/ProductCard";
 import { useContext } from "react";
 import { MyShope } from "./context/ShopeContext";
+import { useState } from "react";
 
 
 const App = () => {
-
 
     const products=[
   {

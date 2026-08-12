@@ -32,7 +32,7 @@ const Form = ({ setStudentCards, studentCards,setUpdatedData, updatedData }) => 
   };
 
   return (
-    <div className="w-full max-w-[500px] rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="w-full max-w-125 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
       {/* Header */}
       <div className="mb-6">
         <h2 className="text-2xl font-bold text-slate-900">Add student</h2>
