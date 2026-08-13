@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [registeredUser, setRegisteredUser] = useState(
     JSON.parse(localStorage.getItem("registerUsers")) || []
   );
-  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loggedInUser, setLoggedInUser] = useState(JSON.parse(localStorage.getItem("loginUsers")));
 
   return (
     <Auth.Provider

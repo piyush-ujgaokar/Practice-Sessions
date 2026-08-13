@@ -1,12 +1,6 @@
 
-import {  Outlet } from 'react-router';
-
 const MainLayout = () => {
-  return (
-    <div>
-        <Outlet/>
-    </div>
-  );
-}
+  return <div className="text-5xl text-white">This is main page</div>;
+};
 
 export default MainLayout;

@@ -1,41 +1,39 @@
+import { createBrowserRouter, RouterProvider } from "react-router";
+import LoginPage from "../pages/AuthPages/LoginPage";
+import AuthLayout from "../layouts/AuthLayout";
+import RegisterPage from "../pages/AuthPages/RegisterPage";
+import MainLayout from "../layouts/MainLayout";
 
-import {createBrowserRouter, RouterProvider} from 'react-router'
-import LoginPage from '../pages/AuthPages/LoginPage';
-import AuthLayout from '../layouts/AuthLayout';
-import RegisterPage from '../pages/AuthPages/RegisterPage';
-import MainLayout from '../layouts/MainLayout';
-import Home from '../pages/Home';
+import ProtectedRoutes from "./ProtectedRoutes";
 const AppRoutes = () => {
-
-let router=createBrowserRouter([
+  let router = createBrowserRouter([
     {
-        path:"/",
-        element:<AuthLayout/>,
-        children:[
-            {
-                path:'',
-                element:<LoginPage/>
-            },
-            {
-                path:'register',
-                element:<RegisterPage/>
-            }
-        ]
+      path: "/",
+      element: <AuthLayout />,
+      children: [
+        {
+          path: "",
+          element: <LoginPage />,
+        },
+        {
+          path: "register",
+          element: <RegisterPage />,
+        },
+      ],
     },
     {
-        path:"/home",
-        element:<MainLayout/>,
-        children:[
-            {
-                path:"",
-                element:<Home/>
-            }
-        ]
-    }
-])
+      path: "/main",
+      element: <ProtectedRoutes />,
+      children: [
+        {
+          path: "",
+          element: <MainLayout />,
+        },
+      ],
+    },
+  ]);
 
-
-  return <RouterProvider router={router}/>
-}
+  return <RouterProvider router={router} />;
+};
 
 export default AppRoutes;

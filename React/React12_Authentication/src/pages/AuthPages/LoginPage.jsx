@@ -31,12 +31,13 @@ const LoginPage = () => {
     }
 
     setLoggedInUser(user);
+    localStorage.setItem("loginUsers",JSON.stringify(user))
 
     console.log("Logged in user --->", user);
     {toast.success(`${user.name} Logged in Successfully`)}
     reset();
 
-    navigate("/home");
+    navigate("/main");
   };
 
   return (
