@@ -4,7 +4,9 @@ import Login from "../pages/Auth/Login";
 import Register from "../pages/Auth/Register";
 import MainLayout from "../layout/MainLayout";
 import HomePage from "../pages/HomePage";
+import ProductsPage from "../pages/ProductsPage"
 import ProtectedRoutes from "./ProtectedRoutes";
+import UsersPage from "../pages/UsersPage";
 
 const AppRoutes = () => {
   let router = createBrowserRouter([
@@ -20,6 +22,14 @@ const AppRoutes = () => {
               path: "",
               element: <HomePage />,
             },
+            {
+                path:"users",
+                element:<UsersPage/>
+            },
+            {
+                path:"products",
+                element:<ProductsPage />
+            }
           ],
         },
       ],

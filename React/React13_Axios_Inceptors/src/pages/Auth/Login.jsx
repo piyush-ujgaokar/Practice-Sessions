@@ -28,14 +28,14 @@ let {registerData,loginData,setLoginData}=useContext(Auth)
     })
 
    if(!isUserExists){
-    {toast.error("Invalid Credentials")}
+    {toast.error("Invalid Credentials Please Create Account")}
     reset()
     return 
    }
 
       navigate("/")
       setLoginData(data)
-      {toast.success(`${data.name} Welcome!`)}
+      {toast.success(`Welcome !`)}
       localStorage.setItem("loginUsers",JSON.stringify(data))
 
       console.log(loginData);
