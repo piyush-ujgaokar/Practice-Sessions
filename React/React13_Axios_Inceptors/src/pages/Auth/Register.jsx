@@ -1,49 +1,7 @@
-import { useContext } from "react";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router";
-import { Auth } from "../../context/AuthContext";
-import { toast } from "react-toastify";
+import { useAuth } from "../../hooks/useAuth";
 
 const Register = () => {
-  let navigate = useNavigate();
-
-  let {registerData,setRegisterData}=useContext(Auth)
-
-  let {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm({
-    mode:"onChange"
-  });
-
-
-const formSubmit=(data)=>{
-  console.log(data);
-
-  let AlreadyExists=registerData.find((user)=>{
-    return data.email === user.email
-  })
-
-  if(AlreadyExists){
-    {toast.error("Email already Exists")}
-    reset()
-    return 
-  }
-
-
-  let arr=[...registerData,data]
-  setRegisterData(arr)
-  {toast.success("Successfully registered")}
-  console.log(registerData);
-  navigate('/auth/login')
-  localStorage.setItem("registerUsers",JSON.stringify(arr))
-
-  reset()
-  
-}
-
+ let {register,handleSubmit,registerFormSubmit,errors,navigate}=useAuth()
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#0f0f0f] px-4">
@@ -58,7 +16,7 @@ const formSubmit=(data)=>{
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit(formSubmit)} className="space-y-5">
+        <form onSubmit={handleSubmit(registerFormSubmit)} className="space-y-5">
           {/* Username */}
           <div>
             <label
