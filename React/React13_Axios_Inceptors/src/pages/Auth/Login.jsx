@@ -28,7 +28,7 @@ let {registerData,loginData,setLoginData}=useContext(Auth)
     })
 
    if(!isUserExists){
-    {toast.error("Invalid Credentials Please Create Account")}
+    {toast.error("Invalid Credentials")}
     reset()
     return 
    }
