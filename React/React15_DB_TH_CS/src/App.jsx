@@ -4,8 +4,7 @@ import ProductCard from "./components/ProductCard";
 
 const App = () => {
   const [productsData, setProductsData] = useState([]);
-  const [input, setInput] = useState(null)
-
+  const [input, setInput] = useState(null);
 
   const getProducts = async () => {
     try {
@@ -16,34 +15,31 @@ const App = () => {
     }
   };
 
-  const filterData=()=>{
-console.log("filter data....");
+  const filterData = () => {
+    console.log("filter data....");
 
-
-   let result= productsData.filter((elem)=>{
-      return elem.title.toLowerCase().includes(input.toLowerCase())
-    })
+    let result = productsData.filter((elem) => {
+      return elem.title.toLowerCase().includes(input.toLowerCase());
+    });
 
     console.log(result);
-    
 
-    setProductsData(result)
-  }
+    setProductsData(result);
+  };
 
-useEffect(()=>{
+  useEffect(() => {
+    if (!input) return;
 
-  if(!input) return
+    let timeOut = setTimeout(() => {
+      filterData();
+    }, 700);
 
-     let timeOut=setTimeout(()=>{
-        filterData()
-     },700)
+    return () => clearTimeout(timeOut);
+  }, [input]);
 
-     return ()=>clearTimeout(timeOut)
-},[input])
-
-  useEffect(()=>{
-    getProducts()
-  },[])
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   return (
     <div className=" p-10  ">
