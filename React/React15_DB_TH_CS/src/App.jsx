@@ -3,61 +3,66 @@ import { useEffect, useState } from "react";
 import ProductCard from "./components/ProductCard";
 
 const App = () => {
+  const [productsData, setProductsData] = useState([]);
+  const [input, setInput] = useState(null)
 
-  const [products, setProducts] = useState([])
-const [input, setInput] = useState(null)
 
-  const getAllproducts = async () => {
+  const getProducts = async () => {
     try {
       let res = await axios.get("https://fakestoreapi.com/products");
-      setProducts(res.data)
+      setProductsData(res.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   const filterData=()=>{
-    console.log("filter running...");
-    let result=products.filter((val)=>{
-        return val.title.toLowerCase().includes(input.toLowerCase())
+console.log("filter data....");
+
+
+   let result= productsData.filter((elem)=>{
+      return elem.title.toLowerCase().includes(input.toLowerCase())
     })
-    setProducts(result)
+
+    console.log(result);
+    
+
+    setProductsData(result)
   }
-  
-  
 
-  useEffect(()=>{
+useEffect(()=>{
 
-    if(!input) return 
-    
-    let timer=setTimeout(() => {
+  if(!input) return
+
+     let timeOut=setTimeout(()=>{
         filterData()
-    },0);
+     },700)
 
-    return ()=>clearTimeout(timer)
-  },[input])
-  
+     return ()=>clearTimeout(timeOut)
+},[input])
+
   useEffect(()=>{
-    getAllproducts()
-    
-},[])
+    getProducts()
+  },[])
 
+  return (
+    <div className=" p-10  ">
+      <div className="text-xl mb-10 ">
+        <input
+          onChange={(e) => setInput(e.target.value)}
+          className="p-3 border rounded-2xl"
+          type="text"
+          placeholder="Search"
+        />
+      </div>
 
-  return <div className=" p-10  ">
-
-   <div className="text-xl mb-10 ">
-    <input onChange={(e)=>setInput(e.target.value)} className="p-3 border rounded-2xl" type="text" placeholder="Search" />
-   </div>
-
-
-  <div className=" gap-10">
-      {
-      products.map((elem)=>{
-        return <h1>{elem.title}</h1>
-      })
-    }
-  </div>
-  </div>;
+      <div className="flex flex-wrap gap-10">
+        {productsData.map((elem) => {
+          return <ProductCard key={elem.id} product={elem} />;
+        })}
+      </div>
+    </div>
+  );
 };
 
 export default App;
