@@ -3,7 +3,7 @@ import { useAuthHook } from "../hooks/useAuthHook";
 const RegisterPage = () => {
 
 
-    let {register,handleSubmit,errors,registerFormSubmit} =useAuthHook()
+    let {register,handleSubmit,errors,registerFormSubmit,navigate} =useAuthHook()
 
 
 
@@ -35,12 +35,15 @@ const RegisterPage = () => {
             </label>
 
             <input
-            {...register(name)}
+            {...register("name",{
+              required:"name is required"
+            })}
               type="text"
               id="username"
               placeholder="Enter your username"
               className="w-full rounded-lg border border-gray-700 bg-[#0f0f0f] px-4 py-3 text-white outline-none placeholder:text-gray-500 transition focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
             />
+            {errors.name && <p className="text-red-700">{errors.name.message}</p>}
           </div>
 
           {/* Email */}
@@ -53,11 +56,15 @@ const RegisterPage = () => {
             </label>
 
             <input
+            {...register("email",{
+              required:"Email is required"
+            })}
               type="email"
               id="email"
               placeholder="Enter your email"
               className="w-full rounded-lg border border-gray-700 bg-[#0f0f0f] px-4 py-3 text-white outline-none placeholder:text-gray-500 transition focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
             />
+            {errors.email && <p className="text-red-700">{errors.email.message}</p>}
           </div>
 
           {/* Password */}
@@ -70,11 +77,19 @@ const RegisterPage = () => {
             </label>
 
             <input
+            {...register("password",{
+              required:"password is required",
+              minLength:{
+                value:6,
+                message:"Password must have 6 char"
+              }
+            })}
               type="password"
               id="password"
               placeholder="Enter your password"
               className="w-full rounded-lg border border-gray-700 bg-[#0f0f0f] px-4 py-3 text-white outline-none placeholder:text-gray-500 transition focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
             />
+            {errors.password && <p className="text-red-700">{errors.password.message}</p>}
           </div>
 
           {/* Register Button */}
