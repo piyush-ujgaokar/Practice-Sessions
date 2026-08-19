@@ -13,10 +13,15 @@ export const useProductApi=()=>{
   })
 
   const filteredData=(searchParams)=>{
-   let filterProduct= data.filter((val)=>{
+    // let productList = data;
+
+    // if (!productList) {
+    //     productList = [];
+    // }
+
+    let filterProduct= data.filter((val)=>{
         return val.title.toLowerCase().includes(searchParams.toLowerCase())
     })
-
     console.log(filterProduct);
     
 
@@ -25,10 +30,54 @@ export const useProductApi=()=>{
    }
   }
 
+
   useEffect(()=>{
     setfiltereData(data)
   },[data])
 
   return {data,isPending,error,filtereData,filteredData}
+
+}
+
+
+export const useProduct=()=>{
+      const [productsData, setProductsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+      const [filtereData, setfiltereData] = useState([])
+  const { data, error } = useProductApi();
+
+
+  const getProducts = async () => {
+    if (!data) {
+      return;
+    }
+
+    setProductsData(data);
+    setfiltereData(data)
+    setIsLoading(false);
+  };
+
+  const filteredData = (searchParams) => {
+    let filterProduct = productsData.filter((val) => {
+      return val.title.toLowerCase().includes(searchParams.toLowerCase());
+    });
+    console.log(filterProduct);
+
+    if (filterProduct) {
+      setfiltereData(filterProduct);
+    }
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, [data]);
+
+  if (error) {
+    return <h1>{error.message}</h1>;
+  }
+
+
+  return {filteredData,filtereData,isLoading,productsData,setIsLoading,setProductsData,setfiltereData}
+
 
 }

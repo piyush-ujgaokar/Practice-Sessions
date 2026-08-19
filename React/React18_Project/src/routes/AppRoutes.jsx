@@ -1,17 +1,28 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
-import AuthLayout from "../layouts/AuthLayout";
-import LoginPage from "../pages/Loginpage";
-import RegisterPage from "../pages/RegisterPage";
-import HomePage from "../pages/HomePage";
-import PublicProtected from "./protected/PublicProtected";
-import MainProtected from "./protected/MainProtected";
-import MainLayout from "../layouts/MainLayout";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { addUser } from "../features/AuthSlice";
 import { useEffect } from "react";
-import AboutPage from "../pages/AboutPage";
-import ShopPage from "../pages/ShopPage";
+// import AuthLayout from "../layouts/AuthLayout";
+// import LoginPage from "../pages/Loginpage";
+// import RegisterPage from "../pages/RegisterPage";
+// import HomePage from "../pages/HomePage";
+// import PublicProtected from "./protected/PublicProtected";
+// import MainProtected from "./protected/MainProtected";
+// import MainLayout from "../layouts/MainLayout";
+// import AboutPage from "../pages/AboutPage";
+// import ShopPage from "../pages/ShopPage";
+
+import { lazy } from "react";
+const AuthLayout = lazy(() => import("../layouts/AuthLayout"));
+const LoginPage = lazy(() => import("../pages/Loginpage"));
+const RegisterPage = lazy(() => import("../pages/RegisterPage"));
+const HomePage = lazy(() => import("../pages/HomePage"));
+const PublicProtected = lazy(() => import("./protected/PublicProtected"));
+const MainProtected = lazy(() => import("./protected/MainProtected"));
+const MainLayout = lazy(() => import("../layouts/MainLayout"));
+const AboutPage = lazy(() => import("../pages/AboutPage"));
+const ShopPage = lazy(() => import("../pages/ShopPage"));
 
 const AppRoutes = () => {
 

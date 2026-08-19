@@ -1,12 +1,4 @@
-import { useProductApi } from "../hooks/ProductHook";
-
-const FilteredProduct = () => {
-
-
-    const {filteredData}=useProductApi()
-
-    
-    
+const FilteredProduct = ({ filteredProduct }) => {
 
 
   return (
@@ -15,7 +7,7 @@ const FilteredProduct = () => {
       {/* Search */}
       <div className="flex flex-1">
         <input
-        onChange={(e)=>filteredData(e.target.value)}
+        onChange={(e) => filteredProduct(e.target.value)}
           type="text"
           placeholder="Search products..."
           className="
