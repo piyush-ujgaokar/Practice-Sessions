@@ -4,6 +4,7 @@ import { loginUserApi } from "../api/AuthApi";
 import { useDispatch } from "react-redux";
 import { addUser } from "../state/authSlice";
 import { toast } from "react-toastify";
+import { loginUserAction } from "../state/authActions";
 
 export const useAuth = () => {
   const navigate = useNavigate();
@@ -20,10 +21,8 @@ export const useAuth = () => {
   const loginFormSubmit=async(data)=>{
     console.log(data);
 try {
-    
-   const response=await loginUserApi(data)
-   dispatch(addUser(response))
-   toast.success("User Login Successfully")
+    dispatch(loginUserAction(data))    
+  
 } catch (error) {
     console.log("Login Form Submit Error",error);
     

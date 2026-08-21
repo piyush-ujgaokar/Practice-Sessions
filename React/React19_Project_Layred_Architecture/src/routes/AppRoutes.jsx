@@ -13,6 +13,7 @@ import { useEffect } from "react";
 import { hydrateUserApi } from "../features/auth/api/AuthApi";
 import { useDispatch } from "react-redux";
 import { addUser } from "../features/auth/state/authSlice";
+import { hydrateUserAction } from "../features/auth/state/authActions";
 
 const AppRoutes = () => {
 
@@ -21,9 +22,7 @@ const AppRoutes = () => {
 useEffect(()=>{
     (async()=>{
         try {
-            let hydrateUser=await hydrateUserApi()
-            console.log(hydrateUser);
-            dispatch(addUser(hydrateUser))
+           dispatch(hydrateUserAction())
             
         } catch (error) {
             console.log("error in hydrate-->",error)
